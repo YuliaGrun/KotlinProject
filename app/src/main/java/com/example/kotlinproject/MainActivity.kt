@@ -5,6 +5,7 @@ import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.kotlinproject.domain.Film
+import com.example.kotlinproject.domain.TestKotlinFunction
 import com.example.kotlinproject.domain.TestObject
 
 class MainActivity : AppCompatActivity() {
@@ -13,6 +14,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        TestKotlinFunction.cycle_1()
+        TestKotlinFunction.cycle_2()
+        TestKotlinFunction.cycle_3()
+
     }
 
     fun onButtonClick(view: View) {
@@ -29,4 +34,7 @@ class MainActivity : AppCompatActivity() {
     fun clickTestObject(view: View) {
         Toast.makeText(this, TestObject.copy(film), Toast.LENGTH_SHORT).show()
     }
+
+
+
 }
