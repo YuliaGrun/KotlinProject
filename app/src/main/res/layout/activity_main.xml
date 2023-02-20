@@ -21,6 +21,11 @@
     android:layout_height="wrap_content"
     android:text="@string/clickYear"
     android:onClick="onYearButton"/>
+<Button
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/clickTestObject"
+    android:onClick="clickTestObject"/>
 
 
 </LinearLayout>

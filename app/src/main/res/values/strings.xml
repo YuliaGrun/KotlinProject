@@ -3,4 +3,5 @@
     <string name="testClick">Button Click</string>
     <string name="clickName">Вывести название фильма</string>
     <string name="clickYear">Вывести год</string>
+    <string name="clickTestObject">Вывести TestObject</string>
 </resources>
