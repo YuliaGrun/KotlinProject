@@ -11,6 +11,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.kotlinproject.R
 import com.example.kotlinproject.databinding.ActivityMainBinding
 import com.example.kotlinproject.databinding.FragmentMainBinding
+import com.example.kotlinproject.viewmodel.AppState
 import com.example.kotlinproject.viewmodel.MainViewModel
 
 class MainFragment : Fragment() {
@@ -32,15 +33,26 @@ class MainFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val viewModel  = ViewModelProvider(this)[MainViewModel::class.java]
-        val observer = object :Observer<Any>{
-            override fun onChanged(data: Any) {
+        val observer = object :Observer<AppState>{
+            override fun onChanged(data: AppState) {
                 renderData(data)
             }
         }
         viewModel.getData().observe(viewLifecycleOwner,observer)
         viewModel.getFilms()
     }
-    private fun renderData(data: Any){
+    private fun renderData(data: AppState){
+        when(data){
+            is AppState.Error -> {
+                binding.loadingLayout.visibility = View.GONE
+            }
+            is AppState.Loading -> {
+                binding.loadingLayout.visibility = View.VISIBLE
+            }
+            is AppState.Success -> {
+                binding.loadingLayout.visibility = View.GONE
+            }
+        }
         Toast.makeText(requireContext(),"data", Toast.LENGTH_SHORT).show()
     }
 }
