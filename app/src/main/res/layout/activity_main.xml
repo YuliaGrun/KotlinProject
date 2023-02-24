@@ -5,27 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
-<Button
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="@string/testClick"
-    android:onClick="onButtonClick"/>
-<Button
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="@string/clickName"
-    android:onClick="onNameButton"/>
-<Button
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="@string/clickYear"
-    android:onClick="onYearButton"/>
-<Button
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="@string/clickTestObject"
-    android:onClick="clickTestObject"/>
-
+    tools:context=".view.MainActivity">
 
 </LinearLayout>

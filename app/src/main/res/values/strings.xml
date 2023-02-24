@@ -4,4 +4,6 @@
     <string name="clickName">Вывести название фильма</string>
     <string name="clickYear">Вывести год</string>
     <string name="clickTestObject">Вывести TestObject</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
